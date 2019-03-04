@@ -1,0 +1,82 @@
+version: 1
+commands:
+ - command : mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4
+   alias: mvn basic
+   tags: unix, windows
+   description : Start Maven quick start archetype in interactive mode
+ - command : docker ps
+   alias: docker status
+   tags: unix, windows
+   description : List docker running containers
+ - command : docker build -t appName:version .
+   args: appName,version
+   alias: docker build
+   tags: unix
+   description: Build docker image from docker file in current directory
+ - command : docker images
+   alias: docker ls images
+   tags: unix
+   description: List docker images
+ - command : docker rmi image:version
+   args: image,version
+   alias: docker rm image
+   tags: unix
+   description: Remove docker image from the registry
+ - command : docker run -it --name containerName -p externalPort:internalPort image:imageVersion
+   args: containerName,externalPort,internalPort,image,imageVersion
+   alias: docker run attach
+   tags: unix
+   description: Run docker image and connect container to terminal
+ - command : docker run -d --name containerName -p externalPort:internalPort image:imageVersion
+   args: containerName,externalPort,internalPort,image,imageVersion
+   alias: docker run detach
+   tags: unix
+   description: Run docker image in detach mode (no output in to the teminal)
+ - command : ssh -i identityFile username@server
+   args: identityFile,username,server
+   alias: ssh server
+   tags: unix
+   description: Directly ssh into the server with private key (.pem) file
+ - command : ssh -i identityFile -J bastianUser@bastianServer username@server
+   args: identityFile,bastianUser,bastianServer,username,server
+   alias: ssh jumphost
+   tags: unix
+   description: Ssh into the server via a jump host (bastian host) with private key (.pem) file
+ - command: alias {aliasName}={command}
+   alias: alias
+   tags: unix
+   description: Make an alias for a command, i.e. alias du=du -h
+ - command: du -h
+   alias: disk usage
+   tags: unix
+   description: Provide disk usage of files in current directory recursively in human readable format
+ - command: cat {filePath}
+   alias: file content
+   tags: unix
+   description: Watch file content
+ - command: tail -f {fileName}
+   alias: file tail
+ - command: df -h
+   alias: disk space
+   tags: unix
+   description: Show disk space consumption
+ - command: env
+   alias: print env
+   tags: unix
+   description: Print environment variables
+ - command: export PATH=$PATH:{path1}:{path2}:{path3}
+   alias: append path
+   tags: unix
+   description: Append given path to system PATH
+ - command: find {location} -name "filename.*"
+   alias: find file
+   tags: unix
+   description: Find matching file name(s) in given location
+ - command: grep {lookupText} {fileName}
+   alias: find text
+   tags: unix
+   description: Find text in a file
+ - command: tar -cvf {tarDestination} {sourcePath}
+   alias: tar
+   tags: unix
+   description: Create tar file
