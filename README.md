@@ -12,6 +12,8 @@ of a developer. If you need to add commands of you own you can add them in the _
 3. Execute the above jar file
 4. List of aliases will be shown when running the program.
 5. Type the alias then press return to get the full command (command will also get copied to clipboard).
+6. You can then type 'Y' to continue or 'N' to exit the program.
+7. You also can add the jar file to path and then use it system wide if you need commands which you will forget for example.
 
 
 
