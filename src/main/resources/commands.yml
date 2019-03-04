@@ -80,3 +80,7 @@ commands:
    alias: tar
    tags: unix
    description: Create tar file
+ - command: git remote add origin {gitRemoteRepoUrl}
+   alias: git add remote
+   tags: unix git
+   description: Add remote repo as an origin (git origin is the remote replica of the local copy) to git repo
