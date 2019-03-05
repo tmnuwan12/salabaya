@@ -56,6 +56,7 @@ commands:
    description: Watch file content
  - command: tail -f {fileName}
    alias: file tail
+   description: Keep tailing (watching) the file
  - command: df -h
    alias: disk space
    tags: unix
@@ -84,3 +85,23 @@ commands:
    alias: git add remote
    tags: unix git
    description: Add remote repo as an origin (git origin is the remote replica of the local copy) to git repo
+ - command: git push -u origin {branchName}
+   alias: git push up
+   tags: unix git
+   description: Push given git branch to remote repo where remote branch is the same as local one and track remote branch
+ - command : uname -a
+   alias: os info
+   tags: unix
+   description: Get os information
+ - command : lshw -short
+   alias: hardware
+   tags: unix
+   description: Get hardware profiles
+ - command : lspci
+   alias: pci devices
+   tags: unix
+   description: Get details on devices attached to PCI bus
+ - command : lsusb
+   alias: usb devices
+   tags: unix
+   description: Get details on devices attached USB bus
