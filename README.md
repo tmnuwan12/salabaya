@@ -4,6 +4,7 @@ Java based utility to provide you helpful CLI commands to get things done when y
 Please note the commands already added to the tools are the ones I find useful in day to day life
 of a developer. If you need to add commands of you own you can add them in the _commands.yml_ file.
 
+Any PRs mostly welcomed. 
 
 ## To run the application:
 
